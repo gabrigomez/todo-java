@@ -14,16 +14,20 @@ public class Todo {
   private Long id;
   private String name;
   private String description;
-  private boolean isDone;
-  private int priority;  
+  private boolean finished;
+  private int priority;
   
-  public Todo(String name, String description, boolean isDone, int priority) {
-    this.name = name;
-    this.description = description;
-    this.isDone = isDone;
-    this.priority = priority;
+  public Todo () {
+    
   }
   
+  public Todo(String name, String description, boolean finished, int priority) {
+    this.name = name;
+    this.description = description;
+    this.finished = finished;
+    this.priority = priority;
+  }
+
   public Long getId() {
     return id;
   }
@@ -42,11 +46,11 @@ public class Todo {
   public void setDescription(String description) {
     this.description = description;
   }
-  public boolean isDone() {
-    return isDone;
+  public boolean isFinished() {
+    return finished;
   }
-  public void setDone(boolean isDone) {
-    this.isDone = isDone;
+  public void setFinished(boolean finished) {
+    this.finished = finished;
   }
   public int getPriority() {
     return priority;
